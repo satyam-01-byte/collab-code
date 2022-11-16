@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "codemirror": "^5.65.2",
     "express": "^4.17.3",
+    "heroku": "^7.66.4",
     "react": "^17.0.2",
     "react-avatar": "^4.0.0",
     "react-dom": "^17.0.2",
@@ -21,7 +22,8 @@
   },
   "scripts": {
     "start:front": "react-scripts start",
-    "start": "npm run build && npm run server:prod",
+    "postinstall": "npm run build",
+    "start": "node server.js",
     "build": "react-scripts build",
     "server:dev": "nodemon server.js",
     "server:prod": "node server.js",
